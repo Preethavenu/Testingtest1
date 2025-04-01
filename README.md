@@ -1,34 +1,39 @@
-# Testing Repository
+# cpp-example
 
-This repository contains a C++ project with CMake configuration and Google Test integration.
+This is a C++ example project that demonstrates the usage of fractions and includes unit tests.
 
 ## Project Structure
 
-- `src/`: Contains the main source code files
-  - `fraction.cpp` and `fraction.h`: Implementation of a fraction class
+- `src/`: Contains the main source code
+  - `fraction.h` and `fraction.cpp`: Implementation of the `fraction` class
   - `main.cpp`: Main entry point of the application
-- `test/`: Contains unit tests using Google Test
-- `cmake/`: Contains CMake configuration files for Google Test
-- `CMakeLists.txt`: Main CMake configuration file
+- `test/`: Contains unit tests
+  - `test_fraction.cpp`: Unit tests for the `fraction` class
+- `cmake/`: Contains CMake-related files for Google Test integration
 
 ## Building the Project
 
-To build the project, follow these steps:
+This project uses CMake as its build system. To build the project, follow these steps:
 
-1. Make sure you have CMake installed
-2. Create a build directory: `mkdir build && cd build`
-3. Run CMake: `cmake ..`
-4. Build the project: `make`
+1. Create a build directory:
+   ```
+   mkdir build
+   cd build
+   ```
 
-## Running Tests
+2. Run CMake:
+   ```
+   cmake ..
+   ```
 
-After building the project, you can run the tests using:
+3. Build the project:
+   ```
+   make
+   ```
 
-```
-ctest
-```
+## Running the Tests
 
-or
+After building the project, you can run the unit tests by executing:
 
 ```
 ./test/unit_test
@@ -36,13 +41,4 @@ or
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Dockerfile
-
-A Dockerfile has been added to containerize the application. To build and run the Docker container:
-
-1. Build the Docker image: `docker build -t cpp-example .`
-2. Run the container: `docker run cpp-example`
-
-Note: The Dockerfile currently uses a Python base image, which may need to be updated to a C++ compatible image for this project.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
